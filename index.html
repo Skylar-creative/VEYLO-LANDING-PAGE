@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VEYLO | House of Sky</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="logo">
+            <span class="logo-main">VEYLO</span>
+            <span class="logo-sub">A House of Sky Brand</span>
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="#collection">Collection</a></li>
+            <li><a href="#about">House of Sky</a></li>
+            <li><a href="#video">Atmosphere</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+
+        <div class="mobile-menu" onclick="toggleMobileMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-overlay" id="mobileOverlay">
+        <a href="#collection" onclick="toggleMobileMenu()">Collection</a>
+        <a href="#about" onclick="toggleMobileMenu()">House of Sky</a>
+        <a href="#video" onclick="toggleMobileMenu()">Atmosphere</a>
+        <a href="#contact" onclick="toggleMobileMenu()">Contact</a>
+    </div>
+
+    <!-- Hero Slider -->
+    <section class="hero-slider">
+        <!-- SLIDE 1: COLLECTION OVERVIEW (NEW) -->
+        <div class="slide active">
+            <div class="slide-bg"></div>
+            <div class="slide-overlay"></div>
+            <div class="slide-content">
+                <p class="fragrance-notes">The Invisible Made Wearable</p>
+                <a href="#collection" class="cta-button">Discover the Collection</a>
+            </div>
+        </div>
+
+        <!-- SLIDE 2: NOIR SKY -->
+        <div class="slide">
+            <div class="slide-bg"></div>
+            <div class="slide-overlay"></div>
+            <div class="slide-content">
+                <p class="fragrance-subtitle">The Depth of Night</p>
+                <p class="fragrance-notes">Black Pepper • Oud • Smoked Incense • Vetiver</p>
+                <a href="#" class="cta-button">Discover</a>
+            </div>
+        </div>
+
+        <!-- SLIDE 3: AFTERLIGHT -->
+        <div class="slide">
+            <div class="slide-bg"></div>
+            <div class="slide-overlay"></div>
+            <div class="slide-content">
+                <p class="fragrance-subtitle">The Golden Hour Captured</p>
+                <p class="fragrance-notes">Amber • Bergamot • Sandalwood • Golden Musk</p>
+                <a href="#" class="cta-button">Discover</a>
+            </div>
+        </div>
+
+        <!-- SLIDE 4: VELUM -->
+        <div class="slide">
+            <div class="slide-bg"></div>
+            <div class="slide-overlay"></div>
+            <div class="slide-content">
+                <p class="fragrance-subtitle">The Veil Between Worlds</p>
+                <p class="fragrance-notes">Iris • Violet Leaf • White Amber • Skin Musk</p>
+                <a href="#" class="cta-button">Discover</a>
+            </div>
+        </div>
+
+        <!-- SLIDE 5: CLOUD IX -->
+        <div class="slide">
+            <div class="slide-bg"></div>
+            <div class="slide-overlay"></div>
+            <div class="slide-content">
+                <p class="fragrance-subtitle">Weightless Elevation</p>
+                <p class="fragrance-notes">Ozonic Notes • Linen • White Tea • Clear Woods</p>
+                <a href="#" class="cta-button">Discover</a>
+            </div>
+        </div>
+
+        <!-- Slider Controls - NOW 5 DOTS -->
+        <div class="slider-controls">
+            <div class="slider-dot active" onclick="goToSlide(0)"></div>
+            <div class="slider-dot" onclick="goToSlide(1)"></div>
+            <div class="slider-dot" onclick="goToSlide(2)"></div>
+            <div class="slider-dot" onclick="goToSlide(3)"></div>
+            <div class="slider-dot" onclick="goToSlide(4)"></div>
+        </div>
+
+        <div class="slider-arrows">
+            <div class="arrow" onclick="changeSlide(-1)">
+                <svg viewBox="0 0 24 24"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+            </div>
+            <div class="arrow" onclick="changeSlide(1)">
+                <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Section -->
+    <section class="video-section" id="video">
+        <div class="video-container">
+            <video autoplay muted loop playsinline>
+                <source src="grok.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div class="video-overlay"></div>
+        <div class="video-content">
+            <h2 class="video-title">The Atmosphere</h2>
+            <p class="video-text">House of Sky explores the architecture of air. VEYLO is our first language—fragrance as the foundation of personal climate.</p>
+        </div>
+    </section>
+
+    <!-- Collection Section -->
+    <section class="collection" id="collection">
+        <div class="section-header">
+            <span class="section-tag">The Collection</span>
+            <h2 class="section-title">Four Altitudes</h2>
+            <p class="section-subtitle">Each fragrance captures a distinct layer of the atmosphere</p>
+        </div>
+
+        <div class="collection-grid">
+            <div class="product-card">
+                <img src="images/NOIR-SKY.png" alt="Noir Sky" class="product-image">
+                <div class="product-info">
+                    <h3 class="product-name">Noir Sky</h3>
+                    <p class="product-type">Eau de Parfum</p>
+                    <p class="product-description">For the night that never sleeps. Deep, mysterious, and infinitely compelling.</p>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="images/AFTERLIGHT.png" alt="Afterlight" class="product-image">
+                <div class="product-info">
+                    <h3 class="product-name">Afterlight</h3>
+                    <p class="product-type">Eau de Parfum</p>
+                    <p class="product-description">The warmth of dusk captured in liquid form. Rich amber and golden woods.</p>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="images/VELUM.png" alt="Velum" class="product-image">
+                <div class="product-info">
+                    <h3 class="product-name">Velum</h3>
+                    <p class="product-type">Eau de Parfum</p>
+                    <p class="product-description">Soft as clouds, intimate as skin. The veil between you and the world.</p>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="images/CLOUD-IX.png" alt="Cloud IX" class="product-image">
+                <div class="product-info">
+                    <h3 class="product-name">Cloud IX</h3>
+                    <p class="product-type">Eau de Parfum</p>
+                    <p class="product-description">Weightless elevation. Clean air and infinite possibility.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="about-content">
+            <div class="about-text">
+                <span class="section-tag">House of Sky</span>
+                <h3>The Invisible Made Wearable</h3>
+                <p>House of Sky is a philosophy of atmosphere. We believe that what surrounds you—air, light, scent—shapes your presence in the world.</p>
+                <p>VEYLO is our first expression: four fragrances that map to four altitudes, four moods, four ways of occupying space. Each scent is designed to be the first layer of your wardrobe, invisible yet essential.</p>
+                <p>In 2026, we extend into fabric. The same philosophy of breath and movement, now in garments.</p>
+                <a href="#" class="cta-button" style="margin-top: 1rem;">Join the Atmosphere</a>
+            </div>
+            <div class="about-image">
+                <img src="images/VEYLO.png" alt="VEYLO Collection">
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <div class="logo">
+                    <span class="logo-main">VEYLO</span>
+                    <span class="logo-sub">A House of Sky Brand</span>
+                </div>
+                <p>The invisible made wearable. Fragrances that occupy the space between skin and air.</p>
+            </div>
+
+            <div class="footer-column">
+                <h4>Explore</h4>
+                <ul>
+                    <li><a href="#">Noir Sky</a></li>
+                    <li><a href="#">Afterlight</a></li>
+                    <li><a href="#">Velum</a></li>
+                    <li><a href="#">Cloud IX</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h4>House of Sky</h4>
+                <ul>
+                    <li><a href="#">Our Philosophy</a></li>
+                    <li><a href="#">The Atelier</a></li>
+                    <li><a href="#">Sustainability</a></li>
+                    <li><a href="#">Coming 2026</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h4>Connect</h4>
+                <ul>
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">Newsletter</a></li>
+                    <li><a href="#">Stockists</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 VEYLO by House of Sky. All rights reserved.</p>
+        </div>
+    </footer>
+    <div class="toast" id="toast"></div>
+    <script src="script.js"></script>
+</body>
+</html>
